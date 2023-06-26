@@ -1,0 +1,675 @@
+
+/* CSS SETUP */
+
+*,
+*::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  outline: none;
+}
+
+:root {
+    --bg-white: #fff;
+
+    --primary-text: #061738;
+    --secondary-color:#60cd12;
+    --light-color: #03262c; 
+    --text-white: #fff;
+    --text-grey: ##dee2e6
+    --anchor-color: #007aff;
+
+    --primary-font: 'Barlow Condensed', sans-serif;
+    --secondary-font: 'Roboto', sans-serif;
+}
+
+body, html {
+    color: var(--primary-text);
+    font-size: 15px;
+    font-weight: 400;
+    scroll-behavior: smooth;
+    line-height: 1.5;
+}
+
+h1,h2,h3,h4,h5,h6,p {
+    margin: 0;
+}
+
+h1 {
+    font-size: 4.5rem;
+    line-height: 1.4;
+    font-weight: 600px;
+    color: var(--primary-text);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+h2 {
+    font-size: 2.7rem;
+    line-height: 1.2;
+    font-weight: 600px;
+    color: var(--primary-text);
+    display: inline-block;
+    text-transform: capitalize;
+    margin-bottom: 2rem;
+
+}
+
+h3 {
+    font-size: 2.1rem;
+    line-height: 1.2;
+    font-weight: 700px;
+    color: var(--text-white);
+}
+
+h4 {
+    font-size: 2rem;
+    line-height: 1;
+    font-weight: 700px;
+    color: var(--primary-text);
+}
+
+h5 {
+    font-size: 1.7rem;
+    line-height: 1;
+    font-weight: 600px;
+    color: var(--primary-text);
+}
+
+p {
+    font-size: 1.4rem;
+    line-height: 1.6;
+    margin-top: 1rem;
+    font-family: var(--secondary-font);
+    color: var(--primary-text);
+}
+
+embed,iframe,img,object {
+    max-width: 100%;
+}
+
+.navbar-nav {
+    margin: 0;
+    padding: 0;
+}
+
+a,a:focus,a:hover,button {
+    text-decoration: none;
+    outline: 0;
+}
+
+a {
+    color: var(--text-white);
+}
+
+a:hover , button:hover{
+    transition: all 0.3s ease-in;
+    -webkit-transition: all 0.3s ease-in;
+    -moz-transition: all 0.3s ease-in;
+    -o-transition: all 0.3s ease-in;
+}
+
+/* Scrollbar design */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg-white);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--secondary-color);
+}
+
+
+.main-btn {
+    position: relative;
+    color: var(--bg-white);
+    background: linear-gradient(to bottom right, #0d5305, #65c21e);
+    z-index: 1;
+    overflow: hidden;
+    border: 0.2rem solid #fff;
+    border-radius: 3.5rem;
+    text-transform: uppercase;
+    padding: 0.6rem 1rem;
+    font-weight: 600;
+    font-size: 1.8rem;
+    margin-top: 1.1rem;
+    letter-spacing: 0.1rem;
+    box-shadow: 5px 2px 5px #41890a;
+}
+
+.main-btn:hover {
+    background: var(--bg-white);
+    color: rgb(6, 109, 6);
+    border: 0.2rem solid rgb(6, 109, 6);
+    text-shadow: 5px 2px 6px  #41890a;
+}
+
+section {
+    padding: 5rem 0;
+}
+
+.section-title {
+    font-size: 4rem;
+    font-weight: 600;
+    color: var(--primary-text);
+    text-transform: capitalize;
+    margin-bottom: 2rem;
+}
+
+.section-subtitle {
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: var(--primary-text);
+    font-family: var(--secondary-font);
+    max-width: 50%;
+    margin: auto;
+    margin-bottom: 1.5rem;
+}
+
+/* .about .banner_section,
+.products .banner_section,
+.gallery .banner_section,
+.contact .banner_section {
+    background: url('/Grocery_Store/Images/banner.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* padding-top: 17rem; 
+    background-position: center;
+    min-height: auto;
+} */
+
+
+/* NAV bar */
+.header {
+    position: absolute;
+    width: 100vw;
+    top: 1rem;
+    /* left: 0; */
+    z-index: 2;
+}
+
+.header .navbar {
+    /* background: url('/Grocery_Store/Images/navBg4.png'); */
+    background-color: rgb(0, 41, 0);
+    border-radius: 2.5rem;
+    padding: 0.2rem 1rem;
+    color: #fff;
+    font-weight: 500;
+}
+
+.header .navbar-brand {
+    margin-top: -0.1rem;
+}
+
+.nav-link {
+    color: white;
+    text-transform: uppercase;
+    font-size: 1.1rem;
+    font-weight: 600;
+    padding: 0.2rem 2rem;
+    margin: 0 0.2rem;
+    font-family: var(--primary-font);
+
+}
+
+.nav-link:hover {
+    color: rgb(69, 231, 0) !important;
+}
+.nav-link:active {
+    color: rgb(69, 231, 0) !important;
+}
+
+.header .navbar-toggler {
+    color: var(--text-white);
+    font-size: 2rem !important;
+    height: 2.7rem;
+    padding: 0;
+}
+
+.header_right span {
+    color: var(--secondary-color);
+    display: block;
+    font-size: 1.2rem;
+    margin-right: 1rem !important;
+
+}
+
+.header_right .phone_no {
+    color: #fff;
+    font-size: 1.2rem;
+}
+
+.header-scrolled{
+    position: fixed;
+    top: -0.4rem;
+    left: 0;
+    right: 0;
+    width: 100%;
+    max-width: 1320px;
+    margin: auto !important;
+    z-index: 999;
+    transition: 0.3s all ease-in-out;
+
+}
+
+/* Banner Section */
+.banner_section{
+    background: url('../Images/FinalFruit1.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-height: 90vh;
+}
+
+.banner_section .carousel-item {
+    padding: 3rem 0;
+    height: 90vh;
+}
+
+.banner_section h3 {                      /*bg color of h3 on banner*/
+    background-color:  rgb(5, 66, 5);
+    width: max-content;
+    padding: 0.2rem 0.5rem;
+    display: inline;
+    margin-top: 3rem;
+}
+
+.banner_section .carousel-item p {
+    width: 50%;               /*To adjust width of p tag content*/
+    max-width: 400px;
+    margin-bottom: 1rem;
+}
+
+.banner_section .carousel-caption {                       /*To adjust the text on banner*/
+    top: 12%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: left;
+    width: 100%;
+
+}
+
+/* Features section */
+.feature-section {
+    background-color: azure;
+}
+
+.feature-section .features-box {
+    background-color: transparent;
+    border: 2px solid var(--light-color);
+    padding: 1.5rem 0.2rem;
+    transition: all 0.3s;
+}
+
+.feature-section h2 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin-left: 35vw;
+    color: #0d5305;
+    text-shadow: 6px 2px 6px rgb(28, 183, 28);
+}
+
+
+.feature-section .features-icon-border {
+    background-color: transparent;
+    border-radius: 50%;
+    border: 1.5px solid goldenrod;
+    padding: 1.5rem;
+    display: inline-block;
+}
+
+.feature-section .features-icon-border .features-icon {
+    height: 7rem;
+    width: 7rem;
+    /* padding: 1px; */
+    border: 1.5px solid goldenrod;
+    background-color: transparent;
+    margin: auto;
+    border-radius: 50%;
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+}
+
+.feature-section .features-icon-border .features-icon img {
+    width: 3rem;
+}
+
+.feature-section .features-box h3 {
+    margin-top: 1.2rem;
+    color: var(--primary-text);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-style: italic;
+    font-weight: 530;
+}
+.feature-section .features-box:hover {
+    border: 4px solid goldenrod;
+    padding: 4rem 0.5rem;
+    box-shadow: 8px 4px 6px goldenrod;
+
+
+}
+.feature-section .features-box:hover h3 {
+    color: goldenrod;
+}
+
+
+/* About Section */
+.about-content h2 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin-top: 0px;
+    width: 50vw;               /*To adjust width of p tag content*/
+    max-width: 500px;
+}
+.about-content p {
+    font-family: 'Times New Roman', Times, serif;
+    margin-top: 0px;
+    margin-bottom: 1.5rem;
+    width: 38vw;               /*To adjust width of p tag content*/
+    max-width: 500px;
+
+}
+
+.landing-about-section{
+    background: url('../Images/aboutImage.png') ;
+    background-size: cover;
+    background-position: center ;
+    background-repeat: no-repeat;
+    padding: 5rem 0;
+}
+
+/* Products Section */
+
+.landing-product-section {
+    padding: 2.5rem 0;
+    background-color:  azure;
+}
+.landing-product-section h2 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: #0d5305;
+    text-shadow: 6px 2px 6px rgb(28, 183, 28);
+    font-size: 3rem;
+    margin-bottom: 0rem;
+}
+.landing-product-section p {
+    font-size: 1.2rem;
+    font-weight: 540;
+    margin-bottom: 4rem;
+}
+
+.landing-product-section .product-card img {
+    height: 250px;
+}
+.landing-product-section .product-card {
+    height: 380px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    border: 2px solid var(--light-color);
+    padding: 5px 3px;
+    transition: all 0.3s;
+}
+
+.landing-product-section .product-card .product-img{
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.landing-product-section .product-card h3 {
+    color: var(--primary-text);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 2rem;
+    margin-left: 0.1rem;
+    font-weight: 550;
+}
+
+.landing-product-section .product-card span {
+    font-size: 1.4rem;
+    font-weight: 600;
+    text-decoration: line-through;
+    color: #061738;
+    margin-right: 0.5rem;
+    transition: all 0.3s;
+}
+
+.landing-product-section .product-card .product-details {
+    position: absolute;
+    bottom: -22rem;
+    right: 0;
+    left: 0;
+    text-align: center;
+    padding: 1.1rem 0.3rem;
+    background: var(--light-color);
+    transition: all 0.5s ease;
+}
+
+.landing-product-section .product-card:hover {
+    height: 440px;
+    box-shadow: 6px 4px 6px 4px var(--light-color);
+}
+.landing-product-section .product-card:hover .product-details {
+    bottom: 0;
+}
+.product-details .main-btn {
+    font-size: 18px;
+}
+
+
+/* Testimonial Section */
+.testimonial-section h2 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: var(--primary-text);
+    text-shadow: 5px 2px 6px var(--primary-text);
+    font-size: 3rem;
+    margin: 1rem 0;
+    letter-spacing: 3px;
+}
+.testimonial-section .section-subtitle p {
+    font-size: 1.2rem;
+    font-weight: 540;
+    margin-bottom: 2.5rem;
+}
+
+.testimonial-section {
+    background-color: rgb(185, 255, 185);
+    padding-bottom: 5rem;
+}
+
+.testimonial-section .carousel-indicators {
+    bottom: -4rem;
+}
+
+.testimonial-section .carousel-indicators button{
+    background-color: var(--light-color);
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+}
+
+.testimonial-section .card {
+    background: linear-gradient(to right bottom, rgb(67, 206, 39),  rgb(28, 93, 28) );
+    text-align: right;
+    padding: 0.5rem 2rem 0 0;
+    border-radius: 0.5rem  ;
+    border: 2px solid transparent;
+}
+
+.testimonial-section .desc-box {
+    height: 320px;
+}
+
+.testimonial-section .desc-box img {
+    width: 100px;
+    height: 80px;
+    margin: 0px 30px;
+}
+
+.testimonial-section .profile-box {
+    padding: 1.3rem;
+    background-color: var(--light-color);
+    border-radius: 0.5rem ;
+}
+.testimonial-section .profile-box img {
+    height: 100%;
+    width: 100%;
+    border-radius: 0.5rem 3rem;
+    object-fit: cover;
+}
+
+.testimonial-section .desc-box h4 {
+    
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.testimonial-section .desc-box p {
+    font-size: 17px;
+}
+
+
+/* Gallery section */
+
+.gallery-section {
+    background-color: azure;
+}
+
+.gallery-section h2 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: var(--primary-text);
+    text-shadow: 5px 2px 6px var(--primary-text);
+    font-size: 3rem;
+    margin: 1rem 0;
+    letter-spacing: 3px;
+}
+
+.gallery-section img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+/* Footer Section */
+.footer-section  {
+    background: url('../Images/footerbg3.jpg');
+    background-position: top center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-top: 8rem ;
+    padding-bottom: 0rem;
+}
+
+.footer-section h5 {
+    color: white;
+    font-size: 1.8rem;
+    margin-bottom: 1.3rem;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 600;
+}
+
+.footer-section ul li {
+    margin-bottom: 0.5rem;
+    list-style: none;
+    font-size: 17px;
+    font-weight: 600;
+}
+
+.footer-section .company-details {
+    font-size: 1.2rem;
+    color: wheat;
+}
+
+.footer-section .contact-info li a {
+    color: rgb(255, 159, 41);
+    font-size: 1.5rem;
+    font-size: 17px;
+}
+
+.footer-section .link-widget li a , .footer-section p{
+    color: wheat;
+    padding-left: 1.5rem;
+    position: relative;
+    transition: all 0.3s ease-in-out 0s;
+}
+
+.footer-section .link-widget li a:before {
+    content: '\f105';
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    position: absolute;
+    left: 0.3rem;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.footer-section .link-widget li a:hover {
+    margin-left: 7px;
+    color: rgb(15, 46, 21);
+}
+
+.social-network a {
+    width: 3rem;
+    height: 3rem;
+    font-size: 1.5rem;
+    line-height: 2.8rem;
+    margin: 0.4rem;
+    display: inline-block;
+    border: 1.5px solid white;
+    border-radius: 100%;
+    text-align: center;
+    transition: all 0.3s cubic-bezier(0.6rem, 0.04, 0.3, 1);
+}
+
+.social-network a:hover {
+    background-color: rgb(2, 101, 22);
+    border-color: rgb(15, 46, 21);
+    box-shadow: 4px 2px 4px wheat;
+    transform: translateY(-0.1875rem);
+}
+
+.footer-section .form-control {
+    font-size: 18px;
+    color: white;
+}
+
+.footer-section .form-control:focus {
+    outline: none;
+    border-color: rgb(36, 237, 36);
+}
+
+.copyright-section {
+    background-color: rgb(17, 104, 17);
+    font-size: 15px;
+}
+
+.copyright-section p{
+    font-size: 15px;
+    text-align: center;
+    font-weight: 500;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+/* Contact us page */
+.contact-form {
+    background-color: rgb(34, 98, 34);
+    padding: 2rem 4rem;
+    box-shadow: 5px 4px 8px 7px rgb(58, 56, 56);
+}
+
+ .contact-form .info-box li {
+    position: relative;
+    padding-left: 5rem;
+    padding-bottom: 2rem;
+    margin-bottom: 0.5rem;
+ }
+
+ .contact-form .info-box li i {
+    position: absolute;
+    left: 0;
+    top: 1rem;
+    font-size: 2.5rem;
+    color: white;
+
+ }

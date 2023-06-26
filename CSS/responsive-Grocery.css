@@ -1,0 +1,65 @@
+@media (max-width: 1200px) {
+  .section-subtitle {
+    max-width: 100%;
+  }
+
+  .header .navbar {
+    background-size: cover;
+    padding: 1rem;
+    font-size: 0.9rem;
+  }
+
+  body,
+  html {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 1100px) {
+  .header .navbar-nav .nav-link {
+    padding-top: 10px;
+    padding-left: 0;
+  }
+  .header .header_right span {
+    margin-left: 3px;
+  }
+
+  body,
+  html {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 900px) {
+  body,
+  html {
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 767px) {
+  body,
+  html {
+    font-size: 9px;
+  }
+}
+
+@media (max-width: 420px) {
+  body,
+  html {
+    font-size: 8px;
+  }
+  h1 {
+    font-size: 25px;
+  }
+  h3 {
+    font-size: 10px;
+  }
+  .banner_section {
+    min-height: 50vh;
+  }
+
+  .banner_section .carousel-item {
+    height: 50vh;
+  }
+}
